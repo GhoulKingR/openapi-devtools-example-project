@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Already saved name:</h1>
+  <div id="server-name">No name...</div>
+
+  <br>
+  <h1>Save new name</h1>
+  <form id="form">
+    <input type="text" id="new-name" required>
+    <button type="submit">submit</button>
+  </form>
+
+  <script>
+    function refreshName() {
+      fetch("/api/name")
+        .then(res => res.text())
+        .then(name => {
+          document.getElementById('server-name').innerHTML = name;
+        });
+    }
+
+    refreshName();
+    
+    document.getElementById("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = document.getElementById("new-name");
+      const name = input.value;
+      fetch("/api/name", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/text"
+        },
+        body: name,
+      })
+        .then(() => {
+          refreshName();
+          input.value = "";
+        })
+    })
+  </script>
+</body>
+</html>
