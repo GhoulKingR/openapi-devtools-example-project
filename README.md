@@ -2,7 +2,7 @@
 
 A simple app that allows you to save a name to the server and change it over and over again.
 
-<img width="1440" alt="image" src="https://github.com/GhoulKingR/openapi-devtools-example-project/assets/87097037/f10a17c5-e121-4200-ba52-fbe16ce5996e">
+<img width="1440" alt="image" src="https://github.com/GhoulKingR/openapi-devtools-example-project/assets/87097037/cf396bd8-7af2-4e9e-bf24-0a2daa5dcc1a">
 
 ## Running the app
 
