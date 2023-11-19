@@ -2,7 +2,7 @@ from flask import Flask, send_file, request
 
 app = Flask(__name__, static_url_path="/")
 
-name = {"text": "Apple bean"}
+name = {"text": "John"}
 
 
 @app.route("/")
