@@ -7,11 +7,15 @@ A simple app that allows you to save a name to the server and change it over and
 ## Running the app
 
 To run this app, here are a few things you need to do:
+
 1. Install it's dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
+
 2. Run the _main.py_ file with this command:
+
 ```bash
 python main.py
 
@@ -19,3 +23,5 @@ python main.py
 
 python3 main.py
 ```
+
+To access the web app, open http://127.0.0.1:5000 on your browser.
