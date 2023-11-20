@@ -1,8 +1,8 @@
-from flask import Flask, send_file, request
+from flask import Flask, send_file, request, jsonify
 
 app = Flask(__name__, static_url_path="/")
 
-name = {"text": "John"}
+response = {"name": "John"}
 
 
 @app.route("/")
@@ -12,14 +12,13 @@ def welcome():
 
 @app.get("/api/name")
 def get_name():
-    return name["text"]
+    return jsonify(response)
 
 
 @app.post("/api/name")
 def set_name():
-    print(request.data)
-    name["text"] = request.data
-    return name["text"]
+    response["name"] = request.json["name"]
+    return jsonify(response)
 
 
 if __name__ == "__main__":
