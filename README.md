@@ -24,4 +24,4 @@ python main.py
 python3 main.py
 ```
 
-To access the web app, open http://127.0.0.1:5000 on your browser.
+When the app is running, open http://127.0.0.1:5000 in your browser to access it.
